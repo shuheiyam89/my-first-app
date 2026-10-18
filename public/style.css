@@ -1,0 +1,76 @@
+:root {
+  --bg: #f4f5f7;
+  --card: #ffffff;
+  --text: #222;
+  --muted: #888;
+  --accent: #4f6ef7;
+  --border: #e2e4e8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 48px 16px;
+}
+
+.app {
+  width: 100%;
+  max-width: 480px;
+  background: var(--card);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  align-self: flex-start;
+}
+
+h1 { margin: 0 0 16px; font-size: 1.5rem; }
+
+form { display: flex; gap: 8px; }
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+ul { list-style: none; padding: 0; margin: 16px 0 0; }
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+li span { flex: 1; word-break: break-word; }
+li.done span { text-decoration: line-through; color: var(--muted); }
+
+li .delete {
+  background: transparent;
+  color: var(--muted);
+  padding: 4px 8px;
+  font-size: 1.1rem;
+}
+li .delete:hover { color: #e5484d; }
+
+.count { color: var(--muted); font-size: 0.9rem; margin: 12px 0 0; }
